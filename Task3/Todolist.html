@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <style>
+      body{
+        box-sizing: border-box;
+        padding-left: 200px;
+        padding-right: 200px;
+      }
+      #container1{
+          background-color: rgb(55, 146, 182);
+          text-align: center;
+          margin-top: 20px;
+          padding: 20px 0;
+      }
+      #hd{
+          font-size: 30px;
+          color: white;
+      }
+      #inputxt{
+         width: 350px;
+         height: 40px; 
+      }
+      #butn{
+        width: 150px;
+        height: 46px;
+      }
+      #myUL{
+          width: 100%;
+          color: white;
+          font-size: larger;
+          height: 50px;
+          list-style: none;
+          margin: 0px;
+          padding: 0px;
+      }
+      li{
+        border-bottom: 1px solid black;
+        background-color: gainsboro;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 4px;
+      }
+    </style>
+</head>
+<body> 
+    <script>
+        var head=document.createElement('h2');
+        var htext=document.createTextNode('List of todo tasks');
+        head.appendChild(htext);
+        head.id='hd';
+        document.body.appendChild(head);
+
+        var input=document.createElement('input');
+        input.placeholder='Title';
+        input.id='inputxt';
+        document.body.appendChild(input);
+    
+        var btn=document.createElement('button');
+        btn.type='button';
+        btn.textContent='Add Activity';
+        btn.addEventListener('click',add);
+        document.body.appendChild(btn);
+        btn.id='butn';
+
+        var div=document.createElement('div');
+        div.appendChild(head);
+        div.appendChild(input);
+        div.appendChild(btn);
+        document.body.appendChild(div);
+        div.id='container1';
+
+       function add() {
+        var li = document.createElement("li");
+        var inputValue = document.getElementById("inputxt").value;
+        var t = document.createTextNode(inputValue);
+        li.appendChild(t);
+        if (inputValue === '') {
+            alert("Enter a task!");
+        }
+        else{
+          document.getElementById("myUL").appendChild(li);
+        }
+        li.addEventListener('click', function(){
+            li.style.textDecoration = "line-through";
+            li.style.color='black';
+            li.style.backgroundColor='gray';
+        })
+       }
+     const list=document.createElement("ul");
+     list.id='myUL';
+     const listitems=document.createElement("li");
+     listitems.innerText="Breakfast"; 
+     list.appendChild(listitems);
+     document.body.appendChild(list);
+     li.id='listid';
+    </script> 
+    </body>
+</html>
