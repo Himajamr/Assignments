@@ -1,0 +1,36 @@
+EVENTS DATABASE
+---------------
+
+3. SELECT  u.id, count(c.event_id) as paid,count(r.event_id) as refused 
+   from user u left join contribution c on c.user_id =u.id left join 
+   refused r on r.user_id =u.id where u.id=15 GROUP BY u.id  ;
+
+4. select sum(amount) from contribution where user_id =12;
+
+5. select g.id,COUNT(ug.user_id), g.created_by ,g.name,u.name as created_on  
+   from  `group` g   left join user_group ug on ug.group_id=g.id  join 
+   user u on u.id=g.created_by where u.id=12 group by ug.group_id ;
+
+
+PROCESS FLOW DATABASE
+---------------------
+
+SELECT s.name as stage_name,p.name as process_name,t.name as task_name ,c.name  as checklist_name
+from process p join process_stage_mapping psm on  p.id=psm.process_id 
+join stage s on s.ID =psm.stage_id
+join stage_task_mapping stm on s.ID =stm.stage_id 
+JOIN task t on stm.task_id =t.ID 
+join task_checklist_mapping tcm on tcm.task_id =t.ID 
+join checklist c on c.ID =tcm.checklist_id 
+where p.ID=1;  
+
+EMPLOYEE DATABASE
+-----------------
+
+1. SELECT * from employee e inner join project_employee_mapping pem on e.id =pem.employee_id inner JOIN  projects p on p.id =pem.project_id ;
+
+2. SELECT * from employee e left outer  join project_employee_mapping pem on e.id =pem.employee_id left outer join projects p on p.id =pem.project_id ;
+
+3. SELECT * from employee e right  join  project_employee_mapping pem on e.id =pem.employee_id RIGHT join projects p on p.id =pem.project_id ;
+
+4. SELECT  id ,name from projects union select  id,name  from department;
