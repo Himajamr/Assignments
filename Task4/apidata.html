@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,
+			initial-scale=1, shrink-to-fit=no" />
+    <title>Display Employee Information</title>
+    <style>
+        body{
+            box-sizing: border-box;
+            text-align: center;
+            width: 800px;
+            margin-left: 250px;
+            margin-right: 250px;
+        }
+        h1{
+            background-color: #9198e5;
+            margin-left: 0px;
+        }
+        .maindiv{
+            margin-top: 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            border: 1px solid black;
+            padding: 0px;
+            background: linear-gradient(#ec7c7c, #9198e5);
+        }
+        .image{
+            border-radius: 50%;
+            padding-top: 2px;
+            padding-bottom: 2px;
+
+        }
+        .emid, .mlid, .flname{
+            padding: 0px;
+            padding-top: 32px;
+            padding-left: 20px;
+            float: left;
+
+        }
+    </style>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Employee Information</h1>
+		<ul id="list"></ul>
+	</div>
+
+	<script>
+        apidata();
+		function apidata() {
+			const xhr = new XMLHttpRequest();
+			xhr.open("GET","https://reqres.in/api/users?page=1", true);
+			xhr.onload = function () {
+					obj = JSON.parse(this.responseText);
+                    let data=obj.data;
+                    for(let index=0;index<data.length;index++){
+                        let div=document.createElement('div');
+                        div.className ="maindiv";
+
+                        let eid=document.createElement("h2");
+                        eid.innerHTML = data[index].id;
+                        eid.className ="emid";
+                        div.appendChild(eid);
+
+                        let mail=document.createElement("h2");
+                        mail.innerHTML = data[index].email;
+                        mail.className ="mlid";
+                        div.appendChild(mail);
+
+                        let name = document.createElement("h2");
+                        name.innerHTML = data[index].first_name +" " + data[index].last_name;
+                        name.className ="flname";
+                        div.appendChild(name);
+
+                        var img=document.createElement("img");
+                        img.src=data[index].avatar;
+                        img.className ="image";
+                        div.appendChild(img);
+
+                        document.body.appendChild(div);
+                    }
+			}
+			xhr.send();
+
+            
+            
+		}
+	</script>
+</body>
+
+</html>
