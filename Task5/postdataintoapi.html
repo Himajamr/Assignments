@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  <style>
+      h1{
+          text-align: center;
+      }
+       .container{
+           width: 700px;
+           height: 500px;
+           border: 1px solid black;
+           margin-top: 10px;
+           padding-top:10px;
+       }
+       #EmpID{
+           margin-left: 25px;
+       }
+       .empid, .fnm, .lnm, .add, .cty, .stat, .code, .date, .btn{
+           margin-left: 200px;
+           margin-top: 10px;
+           margin-bottom: 10px;
+       }
+       #Fname{
+        margin-left: 40px;
+       }
+       #Lname{
+           margin-left: 40px;
+       }
+       #Address{
+           margin-left: 10px;
+       }
+       #city{
+           margin-left: 90px;
+       }
+       #state{
+
+       }
+       
+  </style>
+</head>
+<body>
+    <h1>Employee Information form</h1>
+    <div class="container">
+        <form>
+            <div class="empid">
+                <label>Employee ID</label>
+                <input id="EmpID" type="text" required>
+            </div>
+            <div class="fnm">
+                <label>First name</label>
+                <input id='Fname' type="text" placeholder="First name" required>
+            </div>
+            <div class="lnm">
+              <label>Last name</label>
+              <input id='Lname' type="text" placeholder="Last name" required>
+            </div>
+            <div class="add">
+              <label>Street Address</label>
+              <input id='Address' type="text" required>
+            </div>
+            <div class="cty">
+              <label>City</label>
+              <input id='city' type="text" placeholder="City" required>
+            </div>
+            <div class="stat">
+              <label>State</label>
+              <input id='state' type="text" placeholder="State" required>
+            </div>
+            <div class="code">
+              <label>SiscoCode</label>
+              <input id='siscocode' type="text" placeholder="SiscoCode" required>
+            </div>
+            <div class="date">
+              <label>DateOfBirth</label>
+              <input id='dob' type="date" required>
+            </div>
+            <!-- <div>
+              <label>Image</label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div> -->
+            <div>
+              <button class="btn btn-primary" type="submit" id="submission">Submit form</button>
+            </div>
+          </form>
+
+          <script>
+              $('#submission').click(function(){
+                  var EmpID=$('#EmpID').val();
+                  var Fname=$('#Fname').val();
+                  var Lname=$('#Lname').val();
+                  var Address=$('#Address').val();
+                  var city=$('#city').val();
+                  var state=$('#state').val();
+                  var siscocode=$('#siscocode').val();
+                  var dob=$('#dob').val();
+
+                  $.post('http://corridor.cloud.wavemakeronline.com/EmployeesAPI/services/HRAPI/Employee',{
+                      empid:EmpID,
+                      firstname:Fname,
+                      lastname:Lname,
+                      street:Address,
+                      city:city,
+                      state:state,
+                      siscocode:siscocode,
+                      birthdate:dob})
+                  })
+          </script>
+    </div>
+</body>
+</html>
