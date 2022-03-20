@@ -1,0 +1,119 @@
+.nav-link{
+    color: white;
+}
+.navbar{
+    background-color: #37507e;
+}
+.navbar-brand{
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+.part1{
+    background-color: #37507e;
+    color: white;
+}
+
+.btn1{
+    border-radius: 20px;
+}
+.logo{
+    width: 100px;
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.part2{
+    background-color: gainsboro;
+}
+.about{
+    display: flex;
+    justify-content: center;
+}
+.btn2{
+    border-radius: 5px;
+    border: 3px solid rgb(95, 189, 226);
+    color: rgb(95, 189, 226);
+}
+.image2{
+    width: 500px;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.part4{
+    background-color: #f2f5f9;
+}
+.Acc{
+    color: black;
+}
+.panel{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.part41{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.part51{
+    color: #37507e;
+}
+.skills {
+    margin-top: 15px;
+    width: 100%;
+    background-color: #f5f5f5;
+  }
+  
+  .skills-1 {
+    border-radius: 5px;
+    background-color: #37507e;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    color: white;
+  }
+  .skills-2 {
+    width: 80%; background-color: #37507e;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    color: white;
+  }
+  
+  .skills-3 {
+    width: 45%;
+    background-color: #37507e;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    color: white;
+  }
+  
+  .skills-4 {
+    width: 35%;
+    background-color: #37507e;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    color: white;
+}
+.part6{
+    background-color: gainsboro;
+}
+.part61{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+}
+.part62{
+    width: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.portfolio{
+    display: flex;
+    flex-direction: row;
+}
+
+  
