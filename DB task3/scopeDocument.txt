@@ -1,0 +1,15 @@
+Restaurant Management System
+
+Scope:
+  This system provides service facility to restaurant and to the customer.
+  Customer can visit the restaurant and order food. Customer table has their
+  personal details. Every customer is assigned a unique id. when the customer 
+  orders his food, he is assigned a particular waiter. 
+
+  Orders table will have order id which is unique to each customer, customer 
+  id, the food item the customer ordered i.e food id, order date and a boolean 
+  variable is_paid to know if the customer paid the bill or not.
+
+  Supplier table will have all the suppliers details and the supplies table will
+  have the supplier details and the ingredients the supplier suppliers.
+  
