@@ -1,0 +1,20 @@
+1)Verify if the user is able to navigate through all the products across different categories.
+2) Verify if all the links are redirecting to correct product/category pages.
+3) Verify if the category pages have a  product listed specific to the category.
+4) Verify that on searching all the product satisfying the search criteria are visible on the search result page.
+5) Verify that all the sort options work correctly – correctly sort the products based on the sort option chosen.
+6) Verify that the user can buy products added to the cart after signing in to the application.
+7) Verify if login credentials are correct. 
+8) Verify that the user can buy the product only if it is available.
+9) Verify that the limit to the quantity of a product a user can buy is working correctly.
+10) Verify that the delivery can be declined for the places where shipping is not available.
+11) Verify that the payment methods are working fine.
+12) Verify if the return functionality is working fine.
+13) Verify that the required/mandatory fields are marked with * against the field.
+14) Verify that on clicking submit button after entering all the required fields, submits the data to the server.
+15) Verify that on clicking cancel/reset button after entering all the required fields, cancels the submit request, and reset all the fields.
+16) Verify if logo is Properly visible
+17) Check if the price of the cart is discounted when we apply a valid coupon.
+18) User can order only if atleast 1 product is added to cart
+19) User is redirected to the third party page if he is going to pay through a third party payment gateway like paypal.
+20) Ensure that Name on Card, Card Number, Expiration date, CVV are mandatory fields in the Payment Page.
